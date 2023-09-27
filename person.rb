@@ -3,10 +3,12 @@
 # class for library
 class Person
   # constructor method
-  def initialize(id, name = 'unknown', parent_permission: true)
+  attr_reader :id, :name, :age
+
+  def initialize(age, name = 'unknown', parent_permission: true)
     @name = name
     @age = age
-    @id = id
+    @id = Random.rand(1..1000)
     @parent_permission = parent_permission
   end
 
