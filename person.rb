@@ -5,6 +5,7 @@ require_relative 'capitalize'
 require_relative 'trimcase'
 # class for library
 class Person < Nameable
+  
   # constructor method
   attr_reader :id, :name, :age
 
