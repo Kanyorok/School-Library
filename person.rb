@@ -2,7 +2,6 @@
 
 require_relative 'nameable'
 
-
 # class for library
 class Person < Nameable
   # constructor method
