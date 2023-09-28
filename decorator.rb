@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'nameable'
-# Decorator class
+# Decorator class for use with capitalize and trim classes
 class Decorator < Nameable
   attr_reader :nameable
 
