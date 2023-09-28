@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
+require_relative 'nameable'
+
+
 # class for library
-class Person
+class Person < Nameable
   # constructor method
   attr_reader :id, :name, :age
 
@@ -10,6 +13,7 @@ class Person
     @age = age
     @id = Random.rand(1..1000)
     @parent_permission = parent_permission
+    super()
   end
 
   # getter methods
@@ -36,6 +40,10 @@ class Person
 
   def can_use_services?
     of_age? || @parent_permission
+  end
+
+  def correct_name
+    @name
   end
 
   private
