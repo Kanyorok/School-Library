@@ -31,7 +31,7 @@ I have built a school library app. In this initial step, I implemented classes t
 <details>
 <summary>Ruby</summary>
   <ul>
-    <li><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm">Ruby on Rails</a></li>
+    <li><a href="https://www.tutorialspoint.com/ruby/index.htm">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -78,6 +78,7 @@ Clone this repository to your desired folder:
 To run the project, execute the following command:
 
 > execute the program using the ruby shell.
+> run the code `ruby main.rb`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
