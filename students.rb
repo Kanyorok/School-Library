@@ -2,12 +2,9 @@
 
 # subclass of the class person
 class Students < Person
-  def initialize(age, classroom, name: 'Unknown', parent_permission: true)
-    super(age, name, parent_permission)
-    return unless classroom.respond_to?(:students)
-
-    @classroom = classroom
-    @classroom.addstudent(self)
+  def initialize(name, age, parent_permission)
+    super(age, name)
+    @parent_permission = parent_permission
   end
 
   def classroom=(classroom)
