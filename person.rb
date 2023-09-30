@@ -3,16 +3,19 @@
 require_relative 'nameable'
 require_relative 'capitalize'
 require_relative 'trimcase'
+require_relative 'rental'
 # class for library
 class Person < Nameable
   # constructor method
-  attr_reader :id, :name, :age
+  attr_reader :id, :rentals
+  attr_accessor :name, :age
 
   def initialize(age, name = 'unknown', parent_permission: true)
     @name = name
     @age = age
     @id = Random.rand(1..1000)
     @parent_permission = parent_permission
+    @rentals = []
     super()
   end
 
@@ -46,16 +49,13 @@ class Person < Nameable
     @name
   end
 
+  def rentbook(date, book)
+    Rental.new(date, self, book)
+  end
+
   private
 
   def of_age?
     @age >= 18
   end
 end
-
-person = Person.new(22, 'maximilianus')
-person.correct_name
-capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
